@@ -23,6 +23,8 @@ RUN useradd --create-home --home-dir /home/ds --shell /bin/bash ds
 RUN chown -R ds /opt/ds
 RUN adduser ds sudo
 
+RUN mkdir -p /home/ds/.jupyter && echo "c.NotebookApp.token = u''" >> /home/ds/.jupyter/jupyter_notebook_config.py
+
 ADD run_ipython.sh /home/ds
 RUN chmod +x /home/ds/run_ipython.sh
 RUN chown ds /home/ds/run_ipython.sh
