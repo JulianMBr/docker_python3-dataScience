@@ -1,5 +1,2 @@
 #! /bin/bash
-
-FOLDER=$1
-
-docker build -t dataquestio/$FOLDER-starter -f $FOLDER/Dockerfile .
+docker build -t malokas/python3-dataScience -f python3/Dockerfile .
