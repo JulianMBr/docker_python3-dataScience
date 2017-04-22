@@ -3,6 +3,7 @@ pyzmq
 scipy
 pandas
 matplotlib
+basemap
 statsmodels
 scikit-learn
 seaborn
