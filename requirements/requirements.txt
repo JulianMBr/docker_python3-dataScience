@@ -9,10 +9,10 @@ seaborn
 nltk
 gensim
 sympy
-bokeh
 networkx
 theano
 requests
 beautifulsoup4
 PyMySQL
-dataframe
+folium
+bokeh
