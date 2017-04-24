@@ -5,7 +5,8 @@ FROM ubuntu:14.04
 # Export env settings
 ENV TERM=xterm
 ENV LANG en_US.UTF-8
-ENV TZ=Europe/Luxembourg RUN echo $TZ | tee /etc/timezone RUN dpkg-reconfigure --frontend noninteractive tzdata
+ENV TZ=Europe/Luxembourg
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update -y && apt-get install build-essential -y
 
